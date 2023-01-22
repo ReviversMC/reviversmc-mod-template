@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "templatemod",
+	"version": "${version}",
+	"name": "ReviversMC template mod",
+	"description": "ReviversMC template mod",
+	"authors": [
+		"ReviversMC"
+	],
+	"contact": {
+		"homepage": "https://www.curseforge.com/minecraft/mc-mods/templatemod",
+		"issues": "https://github.com/ReviversMC/templatemod/issues",
+		"sources": "https://github.com/ReviversMC/templatemod"
+	},
+	"icon": "assets/templatemod/icon.png",
+	"license": "LGPL-3.0-or-later",
+	"environment": "*",
+	"entrypoints": {
+		"fabric-datagen": [
+			"com.github.reviversmc.templatemod.datagen.TemplateModDatagen"
+		],
+		"main": [
+			"com.github.reviversmc.templatemod.TemplateMod"
+		]
+	},
+	"depends": {
+		"minecraft": ">=1.19.3",
+		"fabric-api-base": "*"
+	}
+}
