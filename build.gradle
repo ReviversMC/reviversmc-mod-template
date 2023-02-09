@@ -1,7 +1,7 @@
 plugins {
 	id 'fabric-loom'
 	id 'io.github.juuxel.loom-quiltflower'
-	id "checkstyle"
+	id 'checkstyle'
 	id 'com.github.spotbugs'
 }
 
@@ -16,30 +16,30 @@ group = project.maven_group
 
 
 checkstyle {
-	configFile = project.file("checkstyle.xml")
+	configFile = project.file('checkstyle.xml')
 	toolVersion = project.checkstyle_version
 }
 
 
 repositories {
-	if (project.use_third_party_mods == "true") {
+	if (project.use_third_party_mods == 'true') {
 		maven {
-			name = "Modrinth"
-			url = "https://api.modrinth.com/maven"
+			name = 'Modrinth'
+			url = 'https://api.modrinth.com/maven'
 			content {
-				includeGroup "maven.modrinth"
+				includeGroup 'maven.modrinth'
 			}
 		}
 		maven {
-			url = "https://cursemaven.com"
+			url = 'https://cursemaven.com'
 			content {
-				includeGroup "curse.maven"
+				includeGroup 'curse.maven'
 			}
 		}
 	}
 	maven {
-		name = "TerraformersMC"
-		url = "https://maven.terraformersmc.com/releases"
+		name = 'TerraformersMC'
+		url = 'https://maven.terraformersmc.com/releases'
 	}
 	mavenCentral()
 }
@@ -51,15 +51,15 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.fabric_loader_version}"
 
 	// Required Fabric API modules
-	modImplementation(fabricApi.module("fabric-api-base", project.fabric_api_version))
-	modImplementation(fabricApi.module("fabric-data-generation-api-v1", project.fabric_api_version))
+	modImplementation(fabricApi.module('fabric-api-base', project.fabric_api_version))
+	modImplementation(fabricApi.module('fabric-data-generation-api-v1', project.fabric_api_version))
 
 
-	if (project.use_third_party_mods == "true") {
+	if (project.use_third_party_mods == 'true') {
 		configurations {
 			modRuntimeOnly {
 				transitive = true
-				exclude module: "fabric-loader"
+				exclude module: 'fabric-loader'
 			}
 		}
 
@@ -84,11 +84,11 @@ loom {
 		datagen {
 			inherit server
 
-			name "Data Generation"
-			runDir "build/datagen"
+			name 'Data Generation'
+			runDir 'build/datagen'
 
-			vmArg "-Dfabric-api.datagen"
-			vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/resources_generated")}"
+			vmArg '-Dfabric-api.datagen'
+			vmArg "-Dfabric-api.datagen.output-dir=${file('src/main/resources_generated')}"
 		}
 	}
 }
@@ -106,10 +106,10 @@ sourceSets {
 }
 
 processResources {
-	inputs.property "version", project.version
+	inputs.property 'version', project.version
 
-	filesMatching("fabric.mod.json") {
-		expand "version": project.version
+	filesMatching('fabric.mod.json') {
+		expand 'version': project.version
 	}
 }
 
@@ -118,7 +118,7 @@ tasks.withType(JavaCompile).configureEach {
 	// This fixes some edge cases with special characters not displaying correctly,
 	// see http://yodaconditions.net/blog/fix-for-java-file-encoding-problems-with-gradle.html.
 	// If Javadoc is generated, this must be specified in that task too.
-	it.options.encoding = "UTF-8"
+	it.options.encoding = 'UTF-8'
 
 	// Minecraft 1.18-pre2 upwards uses Java 17.
 	it.options.release = 17
