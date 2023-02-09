@@ -2,6 +2,7 @@ plugins {
 	id 'fabric-loom'
 	id 'io.github.juuxel.loom-quiltflower'
 	id "checkstyle"
+	id 'com.github.spotbugs'
 }
 
 
