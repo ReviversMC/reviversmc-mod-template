@@ -1,9 +1,9 @@
-package com.github.reviversmc.templatemod.datagen;
+package com.github.reviversmc.modtemplate.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
-public class TemplateModDatagen implements DataGeneratorEntrypoint {
+public class ModDatagen implements DataGeneratorEntrypoint {
 	@Override
 	public void onInitializeDataGenerator(FabricDataGenerator dataGenerator) {
 		// See Fabric Wiki: https://fabricmc.net/wiki/tutorial:datagen_setup
