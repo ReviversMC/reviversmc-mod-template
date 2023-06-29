@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+	"id": "modtemplate-core",
+	"version": "${version}",
+	"name": "Mod Template Core",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.github.reviversmc.modtemplate.ModInitializerInvoker"
+		]
+	},
+	"mixins": [
+		"modtemplate.mixins.json"
+	],
+	"depends": {
+		"minecraft": ">=1.16",
+		"cloth-config2": ">=4.0.0"
+	},
+	"custom": {
+		"modmenu": {
+			"badges": ["library"],
+			"parent": {
+				"id": "modtemplate"
+			}
+		}
+	}
+}

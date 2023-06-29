@@ -16,15 +16,16 @@
 	"license": "LGPL-3.0-or-later",
 	"environment": "*",
 	"entrypoints": {
-		"fabric-datagen": [
-			"com.github.reviversmc.modtemplate.datagen.ModDatagen"
+		"modmenu": [
+			"com.github.reviversmc.modtemplate.integrations.ModMenuIntegration"
 		],
 		"main": [
 			"com.github.reviversmc.modtemplate.Mod"
 		]
 	},
 	"depends": {
-		"minecraft": ">=1.20",
-		"fabric-api-base": "*"
+		"minecraft": ">=1.16",
+		"fabricloader": ">=0.12.9",
+		"modtemplate-compat-1-20": "*"
 	}
 }

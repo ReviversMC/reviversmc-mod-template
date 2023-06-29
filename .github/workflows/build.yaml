@@ -22,17 +22,8 @@ jobs:
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@v1
 
-      - name: Ensure no old datagenned files are present
-        run: test ! -d ./src/main/resources_generated
-
-      - name: Run Datagen
-        run: ./gradlew runDatagen --stacktrace
-
-      - name: Validate Datagen results
-        run: test -d ./src/main/resources_generated/.cache
-
       - name: Build the mod
-        run: ./gradlew build --stacktrace -x runDatagen
+        run: ./gradlew build --stacktrace
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3

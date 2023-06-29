@@ -12,3 +12,14 @@ pluginManagement {
 		id 'io.github.juuxel.loom-quiltflower' version "${loom_quiltflower_version}"
 	}
 }
+
+rootProject.name = 'modtemplate'
+
+include 'modtemplate-core'
+include 'modtemplate-1.16-compat'
+include 'modtemplate-1.17-compat'
+include 'modtemplate-1.18.2-compat'
+include 'modtemplate-1.19-compat'
+include 'modtemplate-1.19.3-compat'
+include 'modtemplate-1.19.4-compat'
+include 'modtemplate-1.20-compat'

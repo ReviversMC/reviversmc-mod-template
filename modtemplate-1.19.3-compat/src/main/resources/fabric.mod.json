@@ -1,0 +1,23 @@
+{
+	"schemaVersion": 1,
+	"id": "modtemplate-compat-1-19-3",
+	"version": "${version}",
+	"name": "Mod Template 1.19.3 Compat",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.github.reviversmc.modtemplate.ModInitializerRegistrar1193"
+		]
+	},
+	"depends": {
+		"modtemplate-compat-1-19": "*"
+	},
+	"custom": {
+		"modmenu": {
+			"badges": ["library"],
+			"parent": {
+				"id": "modtemplate"
+			}
+		}
+	}
+}
