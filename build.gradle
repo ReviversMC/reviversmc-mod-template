@@ -61,13 +61,13 @@ dependencies {
 			}
 		}
 
-		// Use the full Fabric API while debugging, because transitive deps aren't always defined correctly
+		// Use full Fabric API bundle while debugging, since transitive deps aren't always declared correctly
 		modRuntimeOnly "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
 		modRuntimeOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
 		modRuntimeOnly "maven.modrinth:sodium:${project.sodium_version}"
 		modRuntimeOnly "maven.modrinth:lithium:${project.lithium_version}"
-		modRuntimeOnly "maven.modrinth:ferrite-core:${project.ferrite_core_version}"
+		modRuntimeOnly "maven.modrinth:ferrite-core:${project.ferritecore_version}"
 	}
 }
 
@@ -104,6 +104,10 @@ processResources {
 
 	filesMatching('fabric.mod.json') {
 		expand 'version': project.version
+	}
+
+	from('assets/icon.png') {
+		into 'assets/templatemod/'
 	}
 }
 
