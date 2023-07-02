@@ -67,6 +67,7 @@ dependencies {
 		modRuntimeOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
 		modRuntimeOnly "maven.modrinth:lazydfu:${project.lazydfu_version}"
 		modRuntimeOnly "maven.modrinth:sodium:${project.sodium_version}"
+		runtimeOnly "org.joml:joml:${project.sodium_joml_version}"
 		modRuntimeOnly "maven.modrinth:lithium:${project.lithium_version}"
 		modRuntimeOnly "maven.modrinth:starlight:${project.starlight_version}"
 		modRuntimeOnly "maven.modrinth:ferrite-core:${project.ferritecore_version}"
