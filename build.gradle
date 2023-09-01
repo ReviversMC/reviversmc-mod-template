@@ -1,6 +1,6 @@
 plugins {
 	id 'fabric-loom'
-	id 'io.github.juuxel.loom-quiltflower'
+	id 'io.github.juuxel.loom-vineflower'
 	id 'checkstyle'
 }
 
