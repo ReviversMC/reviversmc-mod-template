@@ -68,6 +68,7 @@ dependencies {
 		modRuntimeOnly "maven.modrinth:sodium:${project.sodium_version}"
 		modRuntimeOnly "maven.modrinth:lithium:${project.lithium_version}"
 		modRuntimeOnly "maven.modrinth:ferrite-core:${project.ferritecore_version}"
+		modRuntimeOnly "maven.modrinth:threadtweak:${project.threadtweak_version}"
 	}
 }
 
