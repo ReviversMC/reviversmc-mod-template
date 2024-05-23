@@ -50,7 +50,7 @@ jobs:
 
           files: build/libs/!(*-@(dev|sources)).jar
 
-          name: 0.0.0 for MC 1.20
+          name: 0.0.0 for MC 1.20 and 1.20.1
           version: 0.0.0+1.20
           version-type: release
 
@@ -59,6 +59,7 @@ jobs:
 
           game-versions: |
             1.20
+            1.20.1
 
           dependencies: |
             fabric-api       | depends
