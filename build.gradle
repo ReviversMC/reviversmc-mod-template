@@ -1,6 +1,7 @@
 plugins {
 	id 'fabric-loom'
 	id 'checkstyle'
+	id 'com.diffplug.spotless'
 }
 
 
@@ -15,6 +16,15 @@ base {
 checkstyle {
 	configFile = project.file('checkstyle.xml')
 	toolVersion = project.checkstyle_version
+}
+
+spotless {
+	java {
+		removeUnusedImports()
+		importOrder('java', 'javax', '', 'net.minecraft', 'com.github.reviversmc')
+		indentWithTabs()
+		trimTrailingWhitespace()
+	}
 }
 
 
